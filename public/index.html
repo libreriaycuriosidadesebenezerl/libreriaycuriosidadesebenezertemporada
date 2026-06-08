@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>Librería Y Curiosidades Eben-Ezer</title>
+<title>Librería Y Curiosidades Eben-Ezer Temporada</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -16,13 +16,13 @@ import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged }
 
 const _savedFbCfg = JSON.parse(localStorage.getItem("lx_fb_config") || "null");
 const FIREBASE_CONFIG = _savedFbCfg || {
-  apiKey: "AIzaSyAqTEPekFgrA6UtALs0Rk612GudhoY6JIw",
-  authDomain: "libreriaycuriosidadesebe-a0516.firebaseapp.com",
-  databaseURL: "https://libreriaycuriosidadesebe-a0516-default-rtdb.firebaseio.com",
-  projectId: "libreriaycuriosidadesebe-a0516",
-  storageBucket: "libreriaycuriosidadesebe-a0516.firebasestorage.app",
-  messagingSenderId: "28181230318",
-  appId: "1:28181230318:web:ffe57fc5bccebca569b9ff"
+  apiKey: "AIzaSyBMlcXzQklVKp6mK-hECxdgHtlrxJRvf6g",
+  authDomain: "libreriaebenezertemporada.firebaseapp.com",
+  databaseURL: "https://libreriaebenezertemporada-default-rtdb.firebaseio.com",
+  projectId: "libreriaebenezertemporada",
+  storageBucket: "libreriaebenezertemporada.firebasestorage.app",
+  messagingSenderId: "501431392134",
+  appId: "1:501431392134:web:f1ebd1fb7ff05af62b7e07"
 };
 const FB_CONFIGURED = true;
 
@@ -742,7 +742,7 @@ h1, h2, h3, h4, .section-title, .nav-logo { font-family: "Crimson Pro", serif; }
 <nav class="navbar">
   <div class="nav-logo">
     <img id="storeLogo" src="" alt="">
-    <span id="storeNameEl">Librería Y Curiosidades Eben-Ezer</span>
+    <span id="storeNameEl">Librería Y Curiosidades Eben-Ezer Temporada</span>
   </div>
   <div class="nav-links">
     <button class="nav-btn active" onclick="showPage('shop')">Tienda</button>
@@ -765,7 +765,7 @@ h1, h2, h3, h4, .section-title, .nav-logo { font-family: "Crimson Pro", serif; }
     <div class="hero-logo-wrap">
       <img id="heroLogo" src="" alt="Logo">
     </div>
-    <h1 id="heroTitle">Bienvenido a<br><span>Librería Y Curiosidades Eben-Ezer</span></h1>
+    <h1 id="heroTitle">Bienvenido a<br><span>Librería Y Curiosidades Eben-Ezer Temporada</span></h1>
     <p id="heroSubtitle">Tu librería de confianza</p>
   </div>
   <h2 class="section-title">Catálogo de Productos</h2>
@@ -1234,7 +1234,7 @@ h1, h2, h3, h4, .section-title, .nav-logo { font-family: "Crimson Pro", serif; }
   <div class="modal quote-modal">
     <div class="quote-header">
       <div style="font-size:3rem; margin-bottom: 0.5rem">📋</div>
-      <h3 id="quoteStoreName" style="margin:0 0 0.5rem; font-size:1.8rem;">Librería Y Curiosidades Eben-Ezer</h3>
+      <h3 id="quoteStoreName" style="margin:0 0 0.5rem; font-size:1.8rem;">Librería Y Curiosidades Eben-Ezer Temporada</h3>
       <div style="font-size:0.95rem;color:var(--text-muted);font-weight:500;" id="quoteDate"></div>
     </div>
     <div style="margin-bottom:1.5rem">
@@ -1281,7 +1281,7 @@ let GT_ALDEAS = {};
 let products=[], orders=[], cart=[];
 let editingId=null, loggedIn=false, currentPage=1;
 const PAGE_SIZE=24;
-let storeSettings={name:"Librería Y Curiosidades Eben-Ezer",desc:"Tu librería de confianza",logo:"",waNumber:"",credentials:"admin:ebenEzer2024",mayoreoConfig:null,shippingZones:{},defaultShipping:25,freeShippingAt:300,
+let storeSettings={name:"Librería Y Curiosidades Eben-Ezer Temporada",desc:"Tu librería de confianza",logo:"",waNumber:"",credentials:"admin:ebenEzer2024",mayoreoConfig:null,shippingZones:{},defaultShipping:25,freeShippingAt:300,
   paymentMethods:{
     cod:{enabled:true,label:"Pago Contra Entrega",icon:"🚚",desc:""},
     transfer:{enabled:false,label:"Transferencia Bancaria",icon:"🏦",desc:""},
@@ -2317,7 +2317,7 @@ function updateFbStatusBadge(){
 }
 
 function saveStoreSettings(){
-  storeSettings.name=document.getElementById("settingName").value.trim()||"Librería Y Curiosidades Eben-Ezer";
+  storeSettings.name=document.getElementById("settingName").value.trim()||"Librería Y Curiosidades Eben-Ezer Temporada";
   storeSettings.desc=document.getElementById("settingDesc").value.trim();
   storeSettings.waNumber=document.getElementById("settingWA").value.trim();
   storeSettings.credentials=document.getElementById("settingCreds").value.trim()||"admin:ebenEzer2024";
@@ -2381,7 +2381,7 @@ function renderShippingZones(){
 
 function openQuote(){
   if(!cart.length){toast("El carrito está vacío","error");return;}
-  document.getElementById("quoteStoreName").textContent=storeSettings.name||"Librería Y Curiosidades Eben-Ezer";
+  document.getElementById("quoteStoreName").textContent=storeSettings.name||"Librería Y Curiosidades Eben-Ezer Temporada";
   document.getElementById("quoteDate").textContent=new Date().toLocaleDateString("es-GT",{year:"numeric",month:"long",day:"numeric"});
 
   const esMayoreo=mayoreoMode&&mayoreoTipo&&mayoreoTipo!=="publico";
@@ -2403,7 +2403,7 @@ function openQuote(){
 }
 function printQuote(){window.print();}
 function shareQuoteWhatsApp(){
-  const wa=storeSettings.waNumber, name=storeSettings.name||"Librería Y Curiosidades Eben-Ezer";
+  const wa=storeSettings.waNumber, name=storeSettings.name||"Librería Y Curiosidades Eben-Ezer Temporada";
   const esMayoreo=mayoreoMode&&mayoreoTipo&&mayoreoTipo!=="publico";
   const labelActivo=esMayoreo?(MAYOREO_SUB_TIPOS[mayoreoTipo]?.label||mayoreoTipo):"Público";
   const client=document.getElementById("quoteClient").value;
@@ -3154,7 +3154,7 @@ function downloadAldeaTemplate(){
 <!-- Footer derechos reservados -->
 <footer id="siteFooter" style="width:100%;text-align:center;padding:1.5rem 1rem 2rem;font-family:'Inter',sans-serif;font-size:0.78rem;color:#000;border-top:1px solid var(--border,#e5e7eb);background:var(--surface,#fff);letter-spacing:0.3px;margin-top:2rem;">
   <div id="socialIconsFooter" style="display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem"></div>
-  © 2026 LIBRERÍA Y CURIOSIDADES EBEN-EZER &nbsp;–&nbsp; Todos Los Derechos Reservados
+  © 2026 LIBRERÍA Y CURIOSIDADES EBEN-EZER TEMPORADA &nbsp;–&nbsp; Todos Los Derechos Reservados
 </footer>
 
 <script>
